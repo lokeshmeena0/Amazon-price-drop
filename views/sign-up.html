@@ -1,0 +1,12 @@
+<div ng-controller='SignUp'>
+    <h2>Sign Up Page</h2>
+    <div>
+        <input ng-model="name" type="text" name="name" placeholder="Enter Name" required>
+        <input ng-model="email" name="email" type="email" placeholder="Enter Email" required>
+        <input ng-model="password" name="password" type="password" placeholder="Enter Password" required>
+        <input ng-model="confirm" name="confirm" type="password" placeholder="Confirm Password" required>
+        <br>
+        <br>
+        <button ng-click='signUp()'>Sign Up</button>
+    </div>
+</div>

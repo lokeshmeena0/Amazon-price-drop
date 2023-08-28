@@ -1,0 +1,31 @@
+{
+    "manifest_version":2,
+    "name": "Amazon Price Drop Extension",
+    "version": "1.0",
+    "description": "Getting started with amazon extension",
+    "content_scripts":[
+        {
+            "matches":[
+                "https://www.amazon.in/gp/registry/wishlist?requiresSignIn=1&ref_=nav_AccountFlyout_wl",
+                "https://www.amazon.in/gp/registry/wishlist/*"
+            ],
+            "css":["alertify.css"],
+            "js":["alertify.js", "content.js", "jquery-3.6.0.js", "content2.js"]
+        },
+        {
+            "matches":["<all_urls>"],
+            "css":["alertify.css","alertify-theme.css"],
+            "js":["alertify.js","content3.js"]
+        }
+    ],
+    "background":{
+        "css":["alertify.css"],
+        "scripts":["alertify.js", "jquery-3.6.0.js", "background.js"]
+    },
+    "browser_action":{
+        "default_popup": "popup.html"
+    },
+    "permissions":[
+        "tabs"
+    ]
+}
